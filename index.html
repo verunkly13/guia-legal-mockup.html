@@ -75,8 +75,10 @@
   }
   .search-panel{
     background:var(--paper);border-radius:3px;padding:22px;
-    display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;
     box-shadow:0 24px 48px -20px rgba(0,0,0,.45);
+  }
+  .search-row{
+    display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;
   }
   .field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:150px;}
   .field label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);font-weight:600;}
@@ -94,7 +96,7 @@
     border:1px solid var(--line);background:#fff;padding:11px 12px;border-radius:2px;
     font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--text);width:100%;
   }
-  .selected-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .selected-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
   .multi-chip{
     background:var(--paper-2);border:1px solid var(--line);border-radius:20px;
     padding:4px 10px;font-size:12.5px;display:flex;align-items:center;gap:6px;
@@ -121,6 +123,98 @@
   .review-date{font-size:11.5px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;}
   .review-text{font-size:13.5px;line-height:1.6;color:var(--text);}
   .review-verified{font-size:11px;color:var(--burgundy);font-weight:600;}
+
+  /* leave a review */
+  .leave-review{
+    border:1px solid var(--line);border-radius:3px;padding:20px 22px;background:var(--paper-2);margin-bottom:24px;
+  }
+  .leave-review h4{font-family:'Source Serif 4',serif;font-size:15.5px;font-weight:600;margin:0 0 4px;}
+  .leave-review .lr-note{font-size:12px;color:var(--text-muted);margin-bottom:14px;line-height:1.5;}
+  .star-picker{display:flex;gap:4px;font-size:22px;color:var(--gold);margin-bottom:12px;cursor:pointer;}
+  .review-textarea{
+    width:100%;border:1px solid var(--line);border-radius:2px;padding:10px 12px;font-family:'IBM Plex Sans',sans-serif;
+    font-size:13.5px;resize:vertical;min-height:70px;box-sizing:border-box;
+  }
+  .lr-submit{
+    margin-top:10px;background:var(--burgundy);color:#fff;border:none;padding:10px 18px;border-radius:2px;
+    font-size:13px;font-weight:600;cursor:pointer;
+  }
+  .leave-review.locked{background:#fff;}
+  .lr-locked-msg{font-size:13px;color:var(--text);line-height:1.6;}
+  .lr-locked-msg b{color:var(--burgundy);}
+  .lr-locked-btn{
+    margin-top:12px;border:1px solid var(--ink);background:none;color:var(--ink);padding:9px 16px;
+    border-radius:2px;font-size:12.5px;font-weight:600;cursor:pointer;
+  }
+
+  /* pricing */
+  .pricing-wrap{max-width:1100px;margin:0 auto;padding:56px 32px 90px;}
+  .founder-banner{
+    background:var(--ink);color:var(--paper);border-radius:3px;padding:18px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:36px;
+    border:1px solid #3C4B70;
+  }
+  .founder-banner b{color:var(--gold-light);}
+  .founder-tag{
+    background:var(--gold);color:var(--ink);font-size:11.5px;font-weight:700;
+    padding:5px 12px;border-radius:20px;white-space:nowrap;
+  }
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .plan-card{
+    border:1px solid var(--line);border-radius:3px;padding:28px 24px;background:#fff;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .plan-card.highlight{border:2px solid var(--gold);position:relative;}
+  .plan-flag{
+    position:absolute;top:-12px;left:24px;background:var(--gold);color:var(--ink);
+    font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:4px 10px;border-radius:20px;
+  }
+  .plan-name{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);}
+  .plan-price{font-family:'Source Serif 4',serif;font-size:36px;font-weight:600;}
+  .plan-price span{font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:var(--text-muted);font-weight:400;}
+  .plan-note{font-size:12px;color:var(--text-muted);}
+  .plan-features{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:9px;font-size:13.5px;}
+  .plan-features li{display:flex;gap:8px;align-items:flex-start;}
+  .plan-features li::before{content:"✓";color:var(--burgundy);font-weight:700;}
+  .plan-btn{
+    margin-top:8px;border:1px solid var(--ink);background:none;color:var(--ink);
+    padding:11px;border-radius:2px;font-size:13.5px;font-weight:600;cursor:pointer;
+  }
+  .plan-btn.filled{background:var(--burgundy);border:none;color:#fff;}
+
+  /* signup form */
+  .form-wrap{max-width:760px;margin:0 auto;padding:56px 32px 90px;}
+  .form-step{
+    display:flex;align-items:center;gap:10px;margin-bottom:32px;font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .form-step .dot{width:22px;height:22px;border-radius:50%;background:var(--paper-2);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text);}
+  .form-step .dot.active{background:var(--burgundy);color:#fff;border:none;}
+  .form-group{margin-bottom:22px;}
+  .form-group label{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted);font-weight:600;margin-bottom:7px;}
+  .form-group input[type=text],.form-group input[type=email],.form-group select{
+    width:100%;border:1px solid var(--line);background:#fff;padding:11px 12px;border-radius:2px;
+    font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--text);
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .upload-box{
+    border:1.5px dashed var(--line);border-radius:3px;padding:18px;display:flex;align-items:center;justify-content:space-between;
+    background:var(--paper-2);font-size:13px;
+  }
+  .upload-box span{color:var(--text-muted);}
+  .upload-btn{border:1px solid var(--ink);background:#fff;padding:7px 14px;border-radius:2px;font-size:12.5px;font-weight:600;cursor:pointer;}
+  .plan-pick{display:flex;gap:10px;}
+  .plan-pick-opt{
+    flex:1;border:1px solid var(--line);border-radius:2px;padding:12px 14px;font-size:13px;text-align:center;cursor:pointer;
+  }
+  .plan-pick-opt.selected{border-color:var(--burgundy);background:var(--paper-2);font-weight:600;}
+  .form-submit{
+    width:100%;background:var(--burgundy);color:#fff;border:none;padding:14px;border-radius:2px;
+    font-size:14.5px;font-weight:600;cursor:pointer;margin-top:8px;
+  }
+  .form-disclaimer{font-size:11.5px;color:var(--text-muted);text-align:center;margin-top:10px;line-height:1.5;}
 
   /* filters + sort */
   .sort-select{
@@ -239,30 +333,32 @@
     <h1>Encontrá al abogado correcto, cerca tuyo.</h1>
     <p>Buscá por provincia, localidad y especialidad. Cada perfil está validado con su número de matrícula ante el Colegio correspondiente.</p>
     <div class="search-panel">
-      <div class="field">
-        <label>Provincia</label>
-        <select><option>Buenos Aires</option></select>
-      </div>
-      <div class="field" style="flex:1.4;">
-        <label>Localidad</label>
-        <select class="add-locality-select">
-          <option>+ Agregar localidad…</option>
-          <option>Toda la provincia de Buenos Aires</option>
-          <option>La Plata</option>
-          <option>Berisso</option>
-          <option>Ensenada</option>
-          <option>Quilmes</option>
-        </select>
-        <div class="selected-list">
-          <div class="multi-chip">La Plata <button>×</button></div>
-          <div class="multi-chip">Berisso <button>×</button></div>
+      <div class="search-row">
+        <div class="field">
+          <label>Provincia</label>
+          <select><option>Buenos Aires</option></select>
         </div>
+        <div class="field" style="flex:1.4;">
+          <label>Localidad</label>
+          <select class="add-locality-select">
+            <option>+ Agregar localidad…</option>
+            <option>Toda la provincia de Buenos Aires</option>
+            <option>La Plata</option>
+            <option>Berisso</option>
+            <option>Ensenada</option>
+            <option>Quilmes</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Especialidad</label>
+          <select><option>Derecho Laboral</option></select>
+        </div>
+        <button class="search-btn">Buscar abogados</button>
       </div>
-      <div class="field">
-        <label>Especialidad</label>
-        <select><option>Derecho Laboral</option></select>
+      <div class="selected-list">
+        <div class="multi-chip">La Plata <button>×</button></div>
+        <div class="multi-chip">Berisso <button>×</button></div>
       </div>
-      <button class="search-btn">Buscar abogados</button>
     </div>
   </div>
   <div class="chips">
@@ -404,6 +500,22 @@
         </div>
       </div>
 
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Ejemplo — usuario que sí contactó por la plataforma</div>
+      <div class="leave-review">
+        <h4>Dejá tu reseña</h4>
+        <div class="lr-note">Contactaste a Mariana el 12/07/2026 por WhatsApp desde EncontráTuAbogado — por eso podés calificarla.</div>
+        <div class="star-picker">★★★★★</div>
+        <textarea class="review-textarea" placeholder="Contá cómo fue tu experiencia..."></textarea>
+        <button class="lr-submit">Publicar reseña</button>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Ejemplo — usuario que todavía no la contactó</div>
+      <div class="leave-review locked">
+        <h4>¿Ya la contactaste?</h4>
+        <div class="lr-locked-msg">Para evitar reseñas falsas, <b>solo pueden calificar a un abogado las personas registradas que lo contactaron a través de la plataforma</b>. Si todavía no la contactaste, hacelo desde el botón de WhatsApp o email de arriba — vas a poder dejar tu reseña después.</div>
+        <button class="lr-locked-btn">Iniciar sesión para reseñar</button>
+      </div>
+
       <div class="review-card">
         <div class="review-head">
           <div class="review-name">Federico A.</div>
@@ -425,6 +537,127 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="screen-label">Pantalla 3 — <span>Precios</span></div>
+<div class="pricing-wrap">
+  <div class="founder-banner">
+    <div><b>Oferta fundadores:</b> los primeros 100 abogados que se suscriban pagan $120.000 el primer año del plan anual (en vez de $150.000). A partir del segundo año se factura al precio vigente.</div>
+    <div class="founder-tag">64 de 100 lugares</div>
+  </div>
+
+  <div class="plans-grid">
+    <div class="plan-card">
+      <div class="plan-name">Mensual</div>
+      <div class="plan-price">$15.000<span>/mes</span></div>
+      <div class="plan-note">Se factura mes a mes</div>
+      <ul class="plan-features">
+        <li>Perfil completo verificado</li>
+        <li>Aparecés en el buscador</li>
+        <li>Recibís reseñas de clientes</li>
+        <li>3 meses gratis al inscribirte</li>
+      </ul>
+      <button class="plan-btn">Elegir mensual</button>
+    </div>
+
+    <div class="plan-card highlight">
+      <div class="plan-flag">Recomendado</div>
+      <div class="plan-name">Anual</div>
+      <div class="plan-price">$150.000<span>/año</span></div>
+      <div class="plan-note">Equivale a $12.500/mes · ahorrás $30.000</div>
+      <ul class="plan-features">
+        <li>Todo lo del plan mensual</li>
+        <li>Un solo pago, sin renovar cada mes</li>
+        <li>Prioridad en soporte</li>
+        <li>3 meses gratis al inscribirte</li>
+      </ul>
+      <button class="plan-btn filled">Elegir anual</button>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-name">Fundador · 1er año</div>
+      <div class="plan-price">$120.000<span>/año</span></div>
+      <div class="plan-note">Precio promocional solo el primer año · solo para los primeros 100 suscriptores</div>
+      <ul class="plan-features">
+        <li>Todo lo del plan anual</li>
+        <li>$30.000 de descuento el primer año</li>
+        <li>Insignia "Miembro fundador" en el perfil</li>
+        <li>3 meses gratis al inscribirte</li>
+      </ul>
+      <button class="plan-btn">Quiero ser fundador</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen-label">Pantalla 4 — <span>Alta de abogado</span></div>
+<div class="form-wrap">
+  <div class="form-step">
+    <div class="dot active">1</div> Datos y matrícula
+    <div class="dot">2</div> Especialidades
+    <div class="dot">3</div> Plan y pago
+  </div>
+
+  <div class="form-group">
+    <label>Nombre y apellido</label>
+    <input type="text" placeholder="Ej: Mariana Villalba">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Provincia</label>
+      <select><option>Buenos Aires</option></select>
+    </div>
+    <div class="form-group">
+      <label>N° de matrícula</label>
+      <input type="text" placeholder="Ej: 84.213">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Colegio de Abogados</label>
+    <select><option>Colegio de Abogados de La Plata</option></select>
+  </div>
+
+  <div class="form-group">
+    <label>Matrícula profesional</label>
+    <div class="upload-box"><span>Subí un PDF o foto de tu constancia de matrícula</span><button class="upload-btn">Adjuntar</button></div>
+  </div>
+
+  <div class="form-group">
+    <label>Título de abogado</label>
+    <div class="upload-box"><span>Subí un PDF o foto del título</span><button class="upload-btn">Adjuntar</button></div>
+  </div>
+
+  <div class="form-group">
+    <label>Posgrados o diplomaturas (opcional)</label>
+    <div class="upload-box"><span>Sumá certificados para destacar tu perfil</span><button class="upload-btn">Adjuntar</button></div>
+  </div>
+
+  <div class="form-group">
+    <label>Información adicional (opcional)</label>
+    <input type="text" placeholder="Ej: +180 causas laborales patrocinadas">
+  </div>
+
+  <div class="form-group">
+    <label>Plan</label>
+    <div class="plan-pick">
+      <div class="plan-pick-opt">Mensual<br>$15.000</div>
+      <div class="plan-pick-opt selected">Anual<br>$150.000</div>
+      <div class="plan-pick-opt">Fundador<br>$120.000</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Datos de la tarjeta</label>
+    <input type="text" placeholder="Número de tarjeta" style="margin-bottom:10px;">
+    <div class="form-row">
+      <input type="text" placeholder="MM/AA">
+      <input type="text" placeholder="CVV">
+    </div>
+  </div>
+
+  <button class="form-submit">Confirmar inscripción</button>
+  <div class="form-disclaimer">No se te cobra nada hoy — los primeros 3 meses son gratis. El cobro del plan elegido empieza en el mes 4.</div>
 </div>
 
 </body>
